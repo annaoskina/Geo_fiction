@@ -34,7 +34,7 @@ for line in data_new_list:
 		try:
 			line.extend(find_coordinates(place_name))
 		except:
-			print(place_name)
+			print('Nominatim Error: ', place_name)
 
 filename = 'places_with_coordinates'
 write_csv(data_new_list, filename)

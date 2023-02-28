@@ -49,7 +49,7 @@ x = 1
 tagger = Tagger('-Owakati')
 result_tally = ['filename,title_jp,author,place_name,frequency,lat,lon\n']
 
-name_csv = 'places_with_coordinates.csv'
+name_csv = 'places_with_coordinates_shortlist.csv'
 places_coord = extract_data(name_csv)
 
 for filename in files:

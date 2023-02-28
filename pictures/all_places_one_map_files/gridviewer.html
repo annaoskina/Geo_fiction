@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0131)https://007d334e2316487b8bfc2784121fde0f.app.posit.cloud/grid_resource/gridviewer.html?env=&obj=data&cache_key=8F801AD3&max_cols=50 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" href="./jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./dataTables.scroller.min.css">
+    <link rel="stylesheet" href="./dtstyles.css">
+    <script type="text/javascript" src="./closest_polyfill.js"></script>
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script type="text/javascript" src="./jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./dataTables.scroller.min.js"></script>
+    <script type="text/javascript" src="./hist.js"></script>
+    <script type="text/javascript" src="./dtviewer.js"></script>
+<style>.rstudio-themes-default #rsGridData_info,
+.rstudio-themes-default table.dataTable thead th,
+.rstudio-themes-default table.dataTable thead td,
+.rstudio-themes-default table.dataTable tbody td {
+   border-color: rgb(214,218,220);
+}
+
+.rstudio-themes-dark-grey #rsGridData_info,
+.rstudio-themes-dark-grey table.dataTable thead th,
+.rstudio-themes-dark-grey table.dataTable thead td,
+.rstudio-themes-dark-grey table.dataTable tbody td {
+   border-color: rgb(12, 31, 48);
+}
+
+.rstudio-themes-alternate #rsGridData_info,
+.rstudio-themes-alternate table.dataTable thead th,
+.rstudio-themes-alternate table.dataTable thead td,
+.rstudio-themes-alternate table.dataTable tbody td {
+   border-color: rgb(181, 210, 226);
+}
+
+.rstudio-themes-default #rsGridData_info,
+.rstudio-themes-default th,
+.rstudio-themes-default td.first-child,
+.rstudio-themes-default table.dataTable thead td {
+   background-color: rgb(244, 248, 249);
+}
+
+.rstudio-themes-dark-grey #rsGridData_info,
+.rstudio-themes-dark-grey th,
+.rstudio-themes-dark-grey td.first-child,
+.rstudio-themes-dark-grey table.dataTable thead th {
+   background-color: rgb(78, 92, 104);
+}
+
+.rstudio-themes-alternate #rsGridData_info,
+.rstudio-themes-alternate th,
+.rstudio-themes-alternate td.first-child,
+.rstudio-themes-alternate table.dataTable thead th {
+   background-color: rgb(225, 239, 247);
+}
+
+.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar,.rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar{background:#fff;}.windows.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar,.windows.rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar{width:17px;height:17px;}.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,.rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-thumb{-webkit-border-radius:10px;background:rgb(78, 92, 104);border:solid 3px rgb(47, 57, 65);}.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,.rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-track,.rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,.rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-corner{background:rgb(47, 57, 65);}</style></head>
+<body style="overflow: hidden" class="rstudio-themes-light-menus rstudio-themes-scrollbars rstudio-themes-default ace_editor_theme linux rstudio-themes-flat" id="rstudio_container">
+    <div id="errorMask">
+    </div>
+    <div id="errorWrapper">
+        <div id="error">
+        </div>
+        <input type="button" onclick="window.location.reload();" value="Retry">
+    </div>
+
+
+<link type="text/css" rel="stylesheet" id="rstudio-acethemes-linkelement" href="./textmate.rstheme"><div id="rsGridData_wrapper" class="dataTables_wrapper no-footer DTS"><div class="dataTables_scroll" style="position: relative;"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 0px; padding-right: 0px;"><table class="dataTable autoSize no-footer" cellspacing="0" role="grid" style="margin-left: 0px; width: 0px;"><thead>   <tr id="data_cols" role="row"><th title="row names" class="first-child sorting_asc" tabindex="0" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px;" aria-sort="ascending" aria-label=": activate to sort column descending"><div class="headerCell"><div></div><div class="resizer" data-col="0"></div></div></th><th title="column 1: character" class="sorting" tabindex="0" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px;" aria-label="place: activate to sort column ascending"><div class="headerCell"><div>place</div><div class="resizer" data-col="1"></div></div></th><th title="column 2: numeric with range 0 - 13000" class="sorting" tabindex="0" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px;" aria-label="frequency: activate to sort column ascending"><div class="headerCell"><div>frequency</div><div class="resizer" data-col="2"></div></div></th><th title="column 3: character" class="sorting" tabindex="0" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px;" aria-label="lat: activate to sort column ascending"><div class="headerCell"><div>lat</div><div class="resizer" data-col="3"></div></div></th><th title="column 4: numeric with range -180 - 180" class="sorting" tabindex="0" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px;" aria-label="lon: activate to sort column ascending"><div class="headerCell"><div>lon</div><div class="resizer" data-col="4"></div></div></th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="overflow: auto; height: 0px; width: 100%; position: relative;"><table id="rsGridData" class="dataTable autoSize no-footer" cellspacing="0" role="grid" aria-describedby="rsGridData_info" style="position: absolute; top: 0px; left: 0px; width: 0px;"><thead>   <tr id="data_cols" role="row" style="height: 0px;"><th title="row names" class="first-child sorting_asc" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-sort="ascending" aria-label=": activate to sort column descending"><div class="dataTables_sizing" style="height:0;overflow:hidden;"><div class="headerCell"><div></div><div class="resizer" data-col="0"></div></div></div></th><th title="column 1: character" class="sorting" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="place: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;"><div class="headerCell"><div>place</div><div class="resizer" data-col="1"></div></div></div></th><th title="column 2: numeric with range 0 - 13000" class="sorting" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="frequency: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;"><div class="headerCell"><div>frequency</div><div class="resizer" data-col="2"></div></div></div></th><th title="column 3: character" class="sorting" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="lat: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;"><div class="headerCell"><div>lat</div><div class="resizer" data-col="3"></div></div></div></th><th title="column 4: numeric with range -180 - 180" class="sorting" aria-controls="rsGridData" rowspan="1" colspan="1" style="width: 44px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="lon: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;"><div class="headerCell"><div>lon</div><div class="resizer" data-col="4"></div></div></div></th></tr></thead><tbody><tr data-row="0" role="row" class="odd"><td class="first-child sorting sorting_1"><div class="textCell" title="1">1</div></td><td><div class="textCell" title="日本">日本</div></td><td><div class="numberCell" title="12703">12703</div></td><td><div class="textCell largeCell" title="36.5748441">36.5748441</div></td><td><div class="numberCell largeCell" title="139.239418">139.239418</div></td></tr><tr data-row="1" role="row" class="even"><td class="first-child sorting sorting_1"><div class="textCell" title="2">2</div></td><td><div class="textCell" title="中国">中国</div></td><td><div class="numberCell" title="6163">6163</div></td><td><div class="textCell" title="35.000074">35.000074</div></td><td><div class="numberCell largeCell" title="104.999927">104.999927</div></td></tr><tr data-row="2" role="row" class="odd"><td class="first-child sorting sorting_1"><div class="textCell" title="3">3</div></td><td><div class="textCell" title="東京">東京</div></td><td><div class="numberCell" title="6043">6043</div></td><td><div class="textCell largeCell" title="35.6812665">35.6812665</div></td><td><div class="numberCell largeCell" title="139.757653">139.757653</div></td></tr><tr data-row="3" role="row" class="even"><td class="first-child sorting sorting_1"><div class="textCell" title="4">4</div></td><td><div class="textCell" title="江戸">江戸</div></td><td><div class="numberCell" title="3483">3483</div></td><td><div class="textCell largeCell" title="33.2048328">33.2048328</div></td><td><div class="numberCell largeCell" title="130.238156">130.238156</div></td></tr><tr data-row="4" role="row" class="odd"><td class="first-child sorting sorting_1"><div class="textCell" title="5">5</div></td><td><div class="textCell" title="京都">京都</div></td><td><div class="numberCell" title="1880">1880</div></td><td><div class="textCell largeCell" title="34.9861909">34.9861909</div></td><td><div class="numberCell largeCell" title="135.760063">135.760063</div></td></tr><tr data-row="5" role="row" class="even"><td class="first-child sorting sorting_1"><div class="textCell" title="6">6</div></td><td><div class="textCell" title="インド">インド</div></td><td><div class="numberCell" title="1832">1832</div></td><td><div class="textCell largeCell" title="22.3511148">22.3511148</div></td><td><div class="numberCell" title="78.667743">78.667743</div></td></tr><tr data-row="6" role="row" class="odd"><td class="first-child sorting sorting_1"><div class="textCell" title="7">7</div></td><td><div class="textCell" title="フランス">フランス</div></td><td><div class="numberCell" title="1643">1643</div></td><td><div class="textCell" title="46.603354">46.603354</div></td><td><div class="numberCell" title="1.888334">1.888334</div></td></tr><tr data-row="7" role="row" class="even"><td class="first-child sorting sorting_1"><div class="textCell" title="8">8</div></td><td><div class="textCell" title="アメリカ">アメリカ</div></td><td><div class="numberCell" title="1513">1513</div></td><td><div class="textCell largeCell" title="39.7837304">39.7837304</div></td><td><div class="numberCell largeCell" title="-100.445882">-100.445882</div></td></tr><tr data-row="8" role="row" class="odd"><td class="first-child sorting sorting_1"><div class="textCell" title="9">9</div></td><td><div class="textCell" title="チベット">チベット</div></td><td><div class="numberCell" title="1494">1494</div></td><td><div class="textCell" title="29.6472">29.6472</div></td><td><div class="numberCell" title="91.117400">91.117400</div></td></tr></tbody></table><div style="position: absolute; top: 0px; left: 0px; width: 1px; height: 160241px;"></div></div><div class="DTS_Loading" style="display: none;">Loading...</div></div><div class="dataTables_info" id="rsGridData_info" role="status" aria-live="polite">Showing 1 to 6,967 of 6,967 entries, 4 total columns</div></div></body></html>

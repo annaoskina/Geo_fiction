@@ -27,11 +27,13 @@ def normalize_place(place):
     except:
         return place 
 
-def count_places(list_places):
+def count_places_add_coordinates(list_places, list_places_with_coordinates):
     places_in_file = []
     for word, frequency in Counter(list_places).most_common():
-        places_in_file.append(word + ',' + str(frequency) + '\n')
-    return places_in_file
+        for place in list_places_with_coordinates:
+            if word == place[0]:
+                places_in_file.append(word + ',' + str(frequency) + ',' + place[2] + ',' + place[3])
+    return places_in_file    #France, 4, lat, lon\n
 
 def extract_data(name_csv):
     with open(name_csv, encoding = 'utf-8') as r_file:
@@ -45,7 +47,11 @@ files = os.listdir(path)
 result_places = []
 x = 1
 tagger = Tagger('-Owakati')
-result_tally = []
+result_tally = ['filename,title_jp,author,place_name,frequency,lat,lon\n']
+
+name_csv = 'places_with_coordinates.csv'
+places_coord = extract_data(name_csv)
+
 for filename in files:
     try:
         text = read_file(path, filename)
@@ -55,9 +61,9 @@ for filename in files:
         clean_list_places = []
         for place in list_places:
             clean_list_places.append(normalize_place(place))
-        places_in_file = count_places(clean_list_places) #[ロシア, 123, \n　ロンドン, 234 \n]
+        places_in_file = count_places_add_coordinates(clean_list_places, places_coord) 
         for place in places_in_file:
-            data = meta_data +','+ place
+            data = meta_data +','+ place + '\n'
             result_tally.append(data)
         x += 1
     except UnicodeDecodeError:

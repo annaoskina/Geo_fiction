@@ -9,7 +9,6 @@ def read_file(path, filename):
 	text = file.read()
 	text_without_rubi = re.sub('《.+?》', '', text)
 	file.close()
-	
 	return text_without_rubi
 
 def extract_places(text, tagger):
@@ -46,15 +45,12 @@ files = os.listdir(path)
 result_places = []
 x = 1
 tagger = Tagger('-Owakati')
-#name_csv = 'data_filenames.csv'
-#data_list = extract_data(name_csv)
-
 result_tally = []
 for filename in files:
     try:
         text = read_file(path, filename)
         print(filename)
-        meta_data = filename.strip('.txt') + ',' + text.split('\n')[0] + ',' + text.split('\n')[1]
+        meta_data = filename.strip('.txt') + ',' + text.split('\n')[0] + ',' + text.split('\n')[1] #here we add to filename title and author
         list_places = extract_places(text, tagger)
         clean_list_places = []
         for place in list_places:
@@ -70,5 +66,5 @@ for filename in files:
 with open('result_tally.csv', 'w', newline = '\n', encoding = 'utf-8') as file:
     for row in result_tally:
         file.write(row)
-#print(result_tally)
+
 print('Done')

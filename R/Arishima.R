@@ -3,15 +3,15 @@ library(leaflet)
 read_csv("https://raw.githubusercontent.com/annaoskina/Geo_fiction/main/csv/result_tally.csv") -> data
 
 data %>% 
-  filter(author == '谷崎潤一郎') %>% 
+  filter(author == '有島武郎') %>% 
   group_by(place_name, lat, lon) %>%
   summarise(total_freq = sum(frequency),
             all_titles = str_c(title_jp, collapse = "<br>")) -> 
-  Tanizaki
+  Arishima
 
-pal_bin <- colorBin("Spectral", domain = Tanizaki$total_freq)
+pal_bin <- colorBin("Spectral", domain = Arishima$total_freq)
 
-Tanizaki %>% 
+Arishima %>% 
   leaflet() %>% 
   addTiles() %>% 
   #addProviderTiles('CartoDB.DarkMatterNoLabels') %>% 
@@ -21,7 +21,7 @@ Tanizaki %>%
              opacity = 1,
              color = ~pal_bin(total_freq),
              radius = ~total_freq*1000,
-             popup = Tanizaki$all_titles) %>% 
+             popup = Arishima$all_titles) %>% 
   addLegend(pal = pal_bin,
-             values = ~total_freq,
-             title = 'Tanizaki Junichiro')
+            values = ~total_freq,
+            title = 'Arishima Takeo')

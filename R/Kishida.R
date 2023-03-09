@@ -3,15 +3,15 @@ library(leaflet)
 read_csv("https://raw.githubusercontent.com/annaoskina/Geo_fiction/main/csv/result_tally.csv") -> data
 
 data %>% 
-  filter(author == '谷崎潤一郎') %>% 
+  filter(author == '島崎藤村') %>% 
   group_by(place_name, lat, lon) %>%
   summarise(total_freq = sum(frequency),
             all_titles = str_c(title_jp, collapse = "<br>")) -> 
-  Tanizaki
+  Shimazaki
 
-pal_bin <- colorBin("Spectral", domain = Tanizaki$total_freq)
+pal_bin <- colorBin("Spectral", domain = Shimazaki$total_freq)
 
-Tanizaki %>% 
+Shimazaki %>% 
   leaflet() %>% 
   addTiles() %>% 
   #addProviderTiles('CartoDB.DarkMatterNoLabels') %>% 
@@ -21,7 +21,7 @@ Tanizaki %>%
              opacity = 1,
              color = ~pal_bin(total_freq),
              radius = ~total_freq*1000,
-             popup = Tanizaki$all_titles) %>% 
+             popup = Shimazaki$all_titles) %>% 
   addLegend(pal = pal_bin,
-             values = ~total_freq,
-             title = 'Tanizaki Junichiro')
+            values = ~total_freq,
+            title = 'Shimazaki Toson')

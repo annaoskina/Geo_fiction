@@ -1,7 +1,6 @@
 library(tidyverse)
 library(leaflet)
-read_csv("https://raw.githubusercontent.com/annaoskina/Geo_fiction/main/result_tally.csv") -> data
-
+read_csv("https://raw.githubusercontent.com/annaoskina/Geo_fiction/main/csv/result_tally.csv") -> data
 data %>% 
   filter(author == '谷崎潤一郎') %>% 
   group_by(place_name, lat, lon) %>%
